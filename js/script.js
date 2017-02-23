@@ -32,6 +32,14 @@ function visProdukt(produkt) {
     } else {
         klon.querySelector(".pris").classList.add("udsolgt");
     }
+
+    if (
+        produkt.rabatsats == 0
+    ) {
+        var rabatpris = klon.querySelector(".rabatpris");
+        rabatpris.parentNode.removeChild(rabatpris);
+    }
+
     //append klon til .produkt-lise
     document.querySelector(".produkt-liste").appendChild(klon);
 }
