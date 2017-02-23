@@ -22,6 +22,8 @@ function visProdukt(produkt) {
 
     var rabatpris = Math.ceil(produkt.pris - (produkt.pris * produkt.rabatsats / 100));
     klon.querySelector(".data_rabatpris").innerHTML = rabatpris;
+
+    klon.querySelector(".data_billede").src = "/billeder/imgs/small/" + produkt.billede + "-sm.jpg";
     //append klon til .produkt-lise
     document.querySelector(".produkt-liste").appendChild(klon);
 }
