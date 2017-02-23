@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Resturant Petrograd</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="containter-fluid center-block text-center logo-top">
+        <img src="billeder/imgs/logo/logo_petrograd.svg" alt="Restaurant Petrograd" style="height
+        220px; width:220px;">
+    </div>
+    <div class="h-line-black center-block"></div>
+    <nav class="menu">
+
+
+    </nav>
+
+    <div class="container-fluid splash_size ">
+        <div class=" home_splash "> </div>
+    </div>
+    <h1 id="hovedretter" class="text-center black_home_h1"> Hovedretter</h1>
+    <div class="container text-center home-wrapper">
+        <div class="row text-center">
+            <div class="button-row">
+                <div class="btn-group col-xs-4">
+                    <button type="button" class="btn btn-primary sortering_knapper">Standard</button>
+                    <button type="button" class="btn btn-primary sortering_knapper">Rabat-pris</button>
+                    <button type="button" class="btn btn-primary sortering_knapper">Vegetar-egnethed</button>
+                </div>
+                <div class="dropdown col-xs-2">
+                    <button class="btn btn-primary sortering_dropdown dropdown-toggle" type="button" data-toggle="dropdown">Sortering
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Navn</a></li>
+                        <li><a href="#">Billede</a></li>
+                        <li><a href="#">Pris</a></li>
+                        <li><a href="#">Udsolgt-status</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container content_menu">
+
+        <div class="black_home_h-line center-block"></div>
+        <div class="row">
+
+            <!-- hovedret 1 -->
+            <template id="produkt_template">
+                <div class="hovedret-1 col-md-4 col-xs-6">
+                    <div id="hovedret-1" class="border">
+                        <div class="food-img-1 data_billede">
+
+                        </div>
+                        <div class="info text-center">
+                            <h2> <span class="data_navn text-center">DATA_NAVN</span> </h2>
+                            <p><em> Pris: <span class="data_pris"> DATA_PRIS </span> kr. </em> </p>
+                            <!-- sægt udsolgt class på og det samme med RABAT -->
+                            <p><em> Pris: <span class="data_rabatpris">DATA_RABATPRIS</span> kr. </em> </p>
+                            <!-- skal kun vises når der er rabat -->
+                            <p><em><span class="data_udsolgttekst"> Denne ret er desværre udsolgt </span></em> </p>
+                            <!-- skal kun vises når udsolgt -->
+                            <p> <span class="data_kortbeskrivelse "> <strong> DATA_KORTBESKRIVELSE </strong></span> </p>
+                        </div>
+                        <div class="læs mere text-center">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary modalknap modalknap_margin_bottom  " data-toggle="modal" data-target="#myModal">
+                                <em> Læs mere</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+
+
+            <!-- hovedret 2 -->
+
+            <div class="hovedret-2 col-md-4 col-xs-6">
+                <div id="hovedret-2" class="border">
+                    <div class="food-img-2"></div>
+                    <div class="info text-center">
+                        <h2> <span class="data_madnavn text-center">Zygroffs bondeplatte</span> </h2>
+                        <p><em> Pris: <span class="data_pris "> 109 </span> kr. </em> </p>
+                        <p> <span class="data_kortbeskrivelse "> <strong> Zygroffs bondeplatte - bøndernes svar på Tapas </strong></span>
+                        </p>
+                    </div>
+                    <div class="læs mere text-center">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary modalknap modalknap_margin_bottom  " data-toggle="modal" data-target="#myModal">
+                            <em>Læs mere</em>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- hovedret 3 -->
+
+            <div class="hovedret-3 col-md-4 col-xs-6">
+                <div id="hovedret-3" class="border">
+                    <div class="food-img-3"></div>
+                    <div class="info text-center">
+                        <h2> <span class="data_madnavn text-center">Diplomat-bøf med grønt</span> </h2>
+                        <p> <em> Pris: <span class="data_pris "> 179 </span> kr. </em> </p>
+                        <p> <span class="data_kortbeskrivelse "> <strong> Diplomat-bøf med grønt</span> </strong>
+                        </p>
+                    </div>
+                    <div class="læs mere text-center">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary modalknap modalknap_margin_bottom  " data-toggle="modal" data-target="#myModal">
+                            <em>Læs mere </em>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- hovedret 4 -->
+
+            <div class="hovedret-4 col-md-4 col-xs-6">
+                <div id="hovedret-4" class="border">
+                    <div class="food-img-4"></div>
+                    <div class="info text-center">
+                        <h2> <span class="data_madnavn text-center">Moldavisk fiskesuppe</span> </h2>
+                        <p> <em> Pris: <span class="data_pris "> 139 </span> kr. </em> </p>
+                        <p> <span class="data_kortbeskrivelse "> <strong> Den dejlige, alkoholholdige moldaviske fiskesuppe</span> </strong>
+                        </p>
+                    </div>
+                    <div class="læs mere text-center">
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary modalknap modalknap_margin_bottom " data-toggle="modal" data-target="#myModal">
+                            <em>Læs mere</em>
+                        </button>
+                    </div>
+
+                    <!--
+                        <a data-toggle="modal" data-target="#myModal">
+                            <div class="read-more-box-style">
+                                <span class="read-more-text-style">Læs mere</span>
+                            </div>
+                        </a>
+-->
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <!-- jQuery Version 1.11.1 -->
+    <script src=" js/jquery.js "></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js "></script>
+
+
+</body>
+
+</html>
