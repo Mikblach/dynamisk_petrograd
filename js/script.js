@@ -24,6 +24,14 @@ function visProdukt(produkt) {
     klon.querySelector(".data_rabatpris").innerHTML = rabatpris;
 
     klon.querySelector(".data_billede").src = "/billeder/imgs/small/" + produkt.billede + "-sm.jpg";
+    if (produkt.udsolgt == false) {
+        // produktet er ikke udsolgt
+        // udsolgttekst skal fjerne
+        var udsolgttekst = klon.querySelector(".data_udsolgttekst");
+        udsolgttekst.parentNode.removeChild(udsolgttekst);
+    } else {
+        klon.querySelector(".pris").classList.add("udsolgt");
+    }
     //append klon til .produkt-lise
     document.querySelector(".produkt-liste").appendChild(klon);
 }

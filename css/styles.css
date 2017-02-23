@@ -97,3 +97,20 @@
         color: white;
         padding-top: 200px;
     }
+
+    .udsolgt {
+        text-decoration: line-through;
+    }
+
+    .max-height {
+        max-height: 500px;
+    }
+
+    .img-size {
+        max-height: 250px;
+        height: 250px;
+    }
+
+    .read_more {
+        padding-top: 50px;
+    }
