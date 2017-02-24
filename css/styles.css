@@ -111,6 +111,6 @@
         height: 250px;
     }
 
-    .read_more {
-        padding-top: 50px;
+    .hovedret-wrapper {
+        max-height: 700px;
     }

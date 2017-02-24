@@ -19,6 +19,7 @@ function visProdukt(produkt) {
     //indsæt data i klon
     klon.querySelector(".data_navn").innerHTML = produkt.navn;
     klon.querySelector(".data_pris").innerHTML = produkt.pris;
+    klon.querySelector(".data_kortbeskrivelse").innerHTML = produkt.kortbeskrivelse;
 
     var rabatpris = Math.ceil(produkt.pris - (produkt.pris * produkt.rabatsats / 100));
     klon.querySelector(".data_rabatpris").innerHTML = rabatpris;
@@ -34,10 +35,13 @@ function visProdukt(produkt) {
     }
 
     if (
-        produkt.rabatsats == 0
+        produkt.udsolgt == false || produkt.rabatsats == 0
     ) {
         var rabatpris = klon.querySelector(".rabatpris");
         rabatpris.parentNode.removeChild(rabatpris);
+    } else {
+        klon.querySelector(".pris").classList.add("udsolgt");
+
     }
 
     //append klon til .produkt-lise
